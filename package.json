@@ -1,0 +1,30 @@
+{
+  "_from": "file:D:/Development/Code/Nodejs/logger/logger-0.0.1.tgz",
+  "_id": "logger@0.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-SCmbkti3JcCapDj1mrSFZP6d5XW1E46Ash2Q8XKQzX4mUFEh2XscabKbd6KLjclsllYOFcUtYbCVt9p83fd48g==",
+  "_location": "/logger",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "file",
+    "where": "D:\\Software\\node-v10.15.3-win-x64",
+    "raw": "D:\\Development\\Code\\Nodejs\\logger\\logger-0.0.1.tgz",
+    "rawSpec": "D:\\Development\\Code\\Nodejs\\logger\\logger-0.0.1.tgz",
+    "saveSpec": "file:D:/Development/Code/Nodejs/logger/logger-0.0.1.tgz",
+    "fetchSpec": "D:/Development/Code/Nodejs/logger/logger-0.0.1.tgz"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "D:/Development/Code/Nodejs/logger/logger-0.0.1.tgz",
+  "_shasum": "3624a52cf047506095e4cfe313f20674bc4de4ba",
+  "_spec": "D:\\Development\\Code\\Nodejs\\logger\\logger-0.0.1.tgz",
+  "_where": "D:\\Software\\node-v10.15.3-win-x64",
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "日志工具",
+  "main": "logger.js",
+  "name": "logger",
+  "private": true,
+  "version": "0.0.1"
+}
