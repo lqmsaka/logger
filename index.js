@@ -4,9 +4,9 @@ const colors = require("colors");
 
 var level = 3;
 
-function getProgramPosition(){
-	var temp = Error().stack.split("\n");
-	var index, index2, time;
+function getProgramPosition() {
+    var temp = Error().stack.split("\n");
+    var index, index2, time;
 	/*for(var i in temp){
 		if(temp[i].indexOf("Module._compile")>0){
 			temp = temp[i-1];
@@ -24,38 +24,44 @@ function getProgramPosition(){
 				return [`[${time}]`.red, `[${temp.substring(7)}]`.green];
 		}
 	}*/
-	if(temp[3]){
-		temp = temp[3];
-		index = temp.lastIndexOf("\\");
-		index2 = temp.indexOf("(");
-		time = new Date().toLocaleString();
-		if(index>0)
-			return [`[${time}]`.red, `[${temp.substring(index+1,temp.length-1)}]`.blue, `[${temp.substring(7, index2-1)}]`.green];
-		else
-			return [`[${time}]`.red, `[${temp.substring(7)}]`.green];
-	}
-	//return Error();
-	//return `[${temp.substring(temp.lastIndexOf("\\") + 1, temp.lastIndexOf(':'))}]`;
+    if (temp[3]) {
+        temp = temp[3];
+        index = temp.lastIndexOf("\\");
+        index2 = temp.indexOf("(");
+        time = new Date().toLocaleString();
+        if (index > 0)
+            return [`[${time}]`.red, `[${temp.substring(index + 1, temp.length - 1)}]`.blue, `[${temp.substring(7, index2 - 1)}]`.green];
+        else
+            return [`[${time}]`.red, `[${temp.substring(7)}]`.green];
+    }
+    //return Error();
+    //return `[${temp.substring(temp.lastIndexOf("\\") + 1, temp.lastIndexOf(':'))}]`;
 }
 //console.log(getProgramPosition());
 
 
-function err(){
-	if(level>0)
-		console.log(...getProgramPosition(), ...arguments);
+function err() {
+    if (level > 0)
+        console.log(...getProgramPosition(), ...arguments);
 }
 //err("err");
 
-function log(){
-	if(level>2)
-		console.log(...getProgramPosition(), ...arguments);
+function log() {
+    if (level > 2)
+        console.log(...getProgramPosition(), ...arguments);
 }
 //log("log");
+
+function dbg() {
+    if (level > 5)
+        console.log(...getProgramPosition(), ...arguments);
+}
 
 
 
 module.exports = {
-  err,
-  log,
-  level,
+    err,
+    log,
+    dbg,
+    level,
 };
